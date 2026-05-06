@@ -6,41 +6,103 @@
   <title>IT Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      /* Fallback gradient */
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+
+      /* Image background */
+      background: url('OIP.jfif') no-repeat center center fixed;
+      background-size: cover;
+
+      color: #ffffff;
+      font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      color: #ffffff;
-      background: url('background.png') no-repeat center center fixed;
-      background-size: cover;
     }
-    header {
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 40px;
       background: rgba(0,0,0,0.6);
     }
-    header h1 {
-      font-size: 2.5em;
-      color: #00bfff;
+    .hero img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #00bfff;
+      box-shadow: 0 0 20px #00bfff;
+      margin-bottom: 20px;
     }
-    nav {
-      margin-top: 20px;
-    }
-    nav a {
-      margin: 0 15px;
+    .hero h1 {
+      font-size: 3em;
       color: #00bfff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 15px #00bfff;
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    .hero a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #00bfff;
+      color: #000;
       text-decoration: none;
       font-weight: bold;
+      border-radius: 6px;
+      transition: 0.3s;
     }
+    .hero a:hover {
+      background: #0099cc;
+      color: #fff;
+      box-shadow: 0 0 15px #00bfff;
+    }
+    /* Sections */
     section {
-      padding: 40px;
-      background: rgba(0,0,0,0.6);
-      margin: 20px;
-      border-radius: 8px;
+      padding: 60px 40px;
+      margin: 40px auto;
+      max-width: 900px;
+      background: rgba(0,0,0,0.7);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,191,255,0.4);
+    }
+    section h2 {
+      color: #00bfff;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    section p {
+      text-align: center;
+      line-height: 1.6;
+    }
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .project-card {
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(0,191,255,0.3);
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #00bfff;
     }
     footer {
       text-align: center;
       padding: 20px;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.8);
       color: #aaa;
     }
   </style>
